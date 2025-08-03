@@ -12,6 +12,10 @@
 ## Installation
 
 ```bash
+ bun add ytce
+```
+
+```bash
 npm install ytce
 ```
 
