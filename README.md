@@ -199,9 +199,3 @@ try {
 ## License
 
 MIT
-
-## Contributing
-
-Issues and pull requests are welcome on [GitHub](https://github.com/your-username/ytce).
-
----
