@@ -1,0 +1,61 @@
+{
+  "name": "yaytt",
+  "version": "0.9.0",
+  "description": "Blazingly fast YouTube caption extractor with deduplication. ",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "bin": {
+    "ytce": "ytce.ts"
+  },
+  "scripts": {
+    "build": "tsc && npm run build:cli",
+    "build:cli": "cp dist/cli.js ytce.ts && sed -i.bak 's|\\./index\\.js|\\./dist/index\\.js|g' ytce.ts && rm ytce.ts.bak && chmod +x ytce.ts",
+    "prepublishOnly": "npm run build",
+    "dev": "bun run src/index.ts",
+    "example": "bun run ytce.ts"
+  },
+  "files": [
+    "dist/**/*",
+    "ytce.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "youtube",
+    "captions",
+    "subtitles",
+    "transcript",
+    "typescript",
+    "portuguese",
+    "deduplication",
+    "vtt",
+    "srt",
+    "youtube-api",
+    "video-processing"
+  ],
+  "author": {
+    "name": "takaxo@jparouca",
+    "email": "joaopearoucaa@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jparouca/ytce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jparouca/ytce/issues"
+  },
+  "homepage": "https://github.com/jparouca/ytce#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/node": "^24.1.0"
+  }
+}
