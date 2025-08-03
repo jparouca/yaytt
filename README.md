@@ -152,13 +152,13 @@ interface CaptionOptions {
 YouTube's auto-generated captions often contain overlapping segments:
 
 ```
-❌ Before:
+Before:
 [0:00] [Música]
 [0:00] [Música] O podcast que você ouve agora é uma
 [0:02] O podcast que você ouve agora é uma
 [0:02] O podcast que você ouve agora é uma produção da Central 3.
 
-✅ After:
+After:
 [0:02] O podcast que você ouve agora é uma produção da Central 3.
 ```
 
