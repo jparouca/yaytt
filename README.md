@@ -89,16 +89,13 @@ const captions = await extractor.extractCaptions("WcBA3QEXJ2o", {
 });
 ```
 
-## Command Line Interface
+## CLI
 
 ```bash
-# Basic usage
 npx ytce WcBA3QEXJ2o
 
-# With ultra-aggressive deduplication
 npx ytce WcBA3QEXJ2o --aggressive
 
-# Using URLs
 npx ytce "https://www.youtube.com/watch?v=WcBA3QEXJ2o"
 ```
 
