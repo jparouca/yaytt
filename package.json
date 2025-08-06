@@ -42,12 +42,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jparouca/ytce.git"
+    "url": "https://github.com/jparouca/yaytt.git"
   },
   "bugs": {
-    "url": "https://github.com/jparouca/ytce/issues"
+    "url": "https://github.com/jparouca/yaytt/issues"
   },
-  "homepage": "https://github.com/jparouca/ytce#readme",
+  "homepage": "https://github.com/jparouca/yaytt#readme",
   "engines": {
     "node": ">=16.0.0"
   },
