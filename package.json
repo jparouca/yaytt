@@ -1,6 +1,6 @@
 {
   "name": "yaytt",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Blazingly fast YouTube caption extractor with deduplication. ",
   "main": "dist/index.js",
   "module": "dist/index.js",
