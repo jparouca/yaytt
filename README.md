@@ -13,25 +13,25 @@
 ## Installation
 
 ```bash
- bun add ytce
+ bun add yaytt
 ```
 
 ```bash
-npm install ytce
+npm install yaytt
 ```
 
 ```bash
-yarn add ytce
+yarn add yaytt
 ```
 
 ```bash
-pnpm add ytce
+pnpm add yaytt
 ```
 
 ## Quick Start
 
 ```typescript
-import { extractCaptions } from "ytce";
+import { extractCaptions } from "yaytt";
 
 const captions = await extractCaptions("WcBA3QEXJ2o");
 
@@ -47,7 +47,7 @@ const captions = await extractCaptions(
 ### Ultra-aggressive deduplication for heavily overlapping captions
 
 ```typescript
-import { extractCaptions } from "ytce";
+import { extractCaptions } from "yaytt";
 
 const cleanCaptions = await extractCaptions("WcBA3QEXJ2o", {
   deduplicationOptions: {
@@ -59,7 +59,7 @@ const cleanCaptions = await extractCaptions("WcBA3QEXJ2o", {
 ### Check available languages
 
 ```typescript
-import { getAvailableLanguages } from "ytce";
+import { getAvailableLanguages } from "yaytt";
 
 const languages = await getAvailableLanguages("WcBA3QEXJ2o");
 console.log(languages);
@@ -69,7 +69,7 @@ console.log(languages);
 ### Full configuration
 
 ```typescript
-import { YouTubeCaptionExtractor } from "ytce";
+import { YouTubeCaptionExtractor } from "yaytt";
 
 const extractor = new YouTubeCaptionExtractor({
   userAgent: "MyApp/1.0",
@@ -93,11 +93,11 @@ const captions = await extractor.extractCaptions("WcBA3QEXJ2o", {
 ## CLI
 
 ```bash
-npx ytce WcBA3QEXJ2o
+npx yaytt WcBA3QEXJ2o
 
-npx ytce WcBA3QEXJ2o --aggressive
+npx yaytt WcBA3QEXJ2o --aggressive
 
-npx ytce "https://www.youtube.com/watch?v=WcBA3QEXJ2o"
+npx yaytt "https://www.youtube.com/watch?v=WcBA3QEXJ2o"
 ```
 
 ## API Reference
@@ -186,7 +186,7 @@ After:
 ## Error Handling
 
 ```typescript
-import { extractCaptions, CaptionExtractionError } from "ytce";
+import { extractCaptions, CaptionExtractionError } from "yaytt";
 
 try {
   const captions = await extractCaptions("invalid-video-id");
