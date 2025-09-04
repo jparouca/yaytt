@@ -7,18 +7,16 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "bin": {
-    "ytce": "ytce.ts"
+    "yaytt": "dist/cli.js"
   },
   "scripts": {
-    "build": "tsc && npm run build:cli",
-    "build:cli": "cp dist/cli.js ytce.ts && sed -i.bak 's|\\./index\\.js|\\./dist/index\\.js|g' ytce.ts && rm ytce.ts.bak && chmod +x ytce.ts",
+    "build": "tsc",
     "prepublishOnly": "npm run build",
     "dev": "bun run src/index.ts",
-    "example": "bun run ytce.ts"
+    "example": "node dist/cli.js"
   },
   "files": [
     "dist/**/*",
-    "ytce.ts",
     "README.md",
     "LICENSE"
   ],

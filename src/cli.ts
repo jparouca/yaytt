@@ -7,10 +7,10 @@ const videoInput = process.argv[2];
 const aggressiveFlag = process.argv.includes('--aggressive');
 
 if (!videoInput) {
-  console.log('Usage: ytce <youtube-url-or-video-id> [--aggressive]');
-  console.log('Example: ytce dQw4w9WgXcQ');
-  console.log('Example: ytce "https://www.youtube.com/watch?v=dQw4w9WgXcQ"');
-  console.log('Example: ytce dQw4w9WgXcQ --aggressive');
+  console.log('Usage: yaytt <youtube-url-or-video-id> [--aggressive]');
+  console.log('Example: yaytt dQw4w9WgXcQ');
+  console.log('Example: yaytt "https://www.youtube.com/watch?v=dQw4w9WgXcQ"');
+  console.log('Example: yaytt dQw4w9WgXcQ --aggressive');
   console.log('');
   console.log('Options:');
   console.log('  --aggressive  Ultra-aggressive deduplication (removes more overlaps)');
