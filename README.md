@@ -4,12 +4,6 @@
 [![npm downloads](https://img.shields.io/npm/dt/yaytt.svg)](https://www.npmjs.com/package/yaytt)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
 
-## Features
-
-- **Smart deduplication** - Removes overlapping auto-generated caption segments
-- **TypeScript support** - Full type definitions included
-- **Zero dependencies** - Lightweight and self-contained
-
 ## Installation
 
 ```bash
@@ -40,20 +34,6 @@ const englishCaptions = await extractCaptions("WcBA3QEXJ2o", { lang: "en" });
 const captions = await extractCaptions(
   "https://www.youtube.com/watch?v=WcBA3QEXJ2o",
 );
-```
-
-## Advanced Usage
-
-### Ultra-aggressive deduplication for heavily overlapping captions
-
-```typescript
-import { extractCaptions } from "yaytt";
-
-const cleanCaptions = await extractCaptions("WcBA3QEXJ2o", {
-  deduplicationOptions: {
-    aggressiveMode: true, // Maximum deduplication
-  },
-});
 ```
 
 ### Check available languages
@@ -164,24 +144,6 @@ After:
 [0:02] O podcast que você ouve agora é uma produção da Central 3.
 ```
 
-**Results:**
-
-- Normal mode: ~50% reduction in caption count
-- Aggressive mode: ~70% reduction for heavily overlapping content
-
-## How It Works
-
-1. Extracts API keys from YouTube video pages
-2. Calls YouTube's Innertube API directly (same API used by youtube.com)
-3. Fetches caption track URLs from video metadata
-4. Downloads VTT caption files directly from YouTube's servers
-5. Parses timestamps and text into a clean format
-6. Applies smart deduplication to remove overlapping segments
-
-## Requirements
-
-- Node.js 16+ or compatible runtime
-- Server-side only (not for browser use due to CORS)
 
 ## Error Handling
 
